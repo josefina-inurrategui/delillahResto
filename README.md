@@ -1,5 +1,5 @@
-# delillahResto
-RESTfull API utilizando: 
+﻿# delillahResto
+RESTful API utilizando: 
   - express
   - nodejs
   - MySQL 
@@ -38,39 +38,42 @@ email: josefina.inurrategui@gmail.com
 # ENDPOINTS:
   A clientes: 
     - post/clientes
-    - postclientes/login
+    - post/clientes/login
     - get/clientes
-    - put/clientes/update
-    - delete/clientes/cliente/:id
+    - put/clientes/
+    - delete/clientes/:id
 
   A productos:
     - post/productos
     - get/productos
-    - put/productos/producto/:id
-    - delete/productos/producto/:id
+    - put/productos/:id
+    - delete/productos/:id
 
   A Pedidos
     - post/pedidos
     - get/pedidos
-    - get/pedidos/userOrder/:id
-    - put/pedidos/pedido/:id
-    - delete/pedidos/pedido/:id
-------------------------------------//------------------------------------------
-RESTfull API using: 
+    - get/pedidos/:id
+    - put/pedidos/:id
+    - delete/pedidos/:id
+
+--------------------//------------------------
+
+
+# RESTful API using: 
   - express
   - nodejs
   - MySQL 
   - Javascript 
-description: "API for the managment of restaurant online orders" 
+description: "API for the managment of online restaurant orders" 
 version: "1.0.0"
 title: "Delillah Resto" 
 contact: Josefina Iñurrategui
 email: josefina.inurrategui@gmail.com
 
 # SERVER: 
-  To initialice the server:
+  To initialize the server:
     - Install "express" dependency (npm i express);
-    - On "api.js" you will see that the port used is 3001, if need it change it
+    - On "api.js" you will see that the port used is 3001, if needed, change it.
 
 # DEPENDENCIES:
   The dependencies to install in the API are:
@@ -79,36 +82,36 @@ email: josefina.inurrategui@gmail.com
       - sequelize
       - jsonwebtoken
       - MySQL2
-  (You will find all of them in the "package.json")
+  (You will find them all in the "package.json")
   
-# DATA BASE:
-  Once the dependency MySQL2 is install, you'll be able to create de data base with "delillah.sql" file
+# DATABASE:
+  Once the dependency MySQL2 is installed, you'll be able to create the database and tables using "delillah.sql".
   We recomend using PhpMyAdmin.
 
 
 # POSTMAN:
- In the file "Api Delillah.postman_collection.json" are the test and requests to the enpoints.
+ In the file "Api Delillah.postman_collection.json" are the tests and requests to the endpoints.
  
 # RESPONSE:
-  All endpoints return Json object.
+  All endpoints return Json objects.
   
 # ENDPOINTS:
-  To clients: 
+  Clients: 
     - post/clientes
-    - postclientes/login
+    - post/clientes/login
     - get/clientes
-    - put/clientes/update
-    - delete/clientes/cliente/:id
+    - put/clientes
+    - delete/clientes/:id
 
-  To products:
+  Products:
     - post/productos
     - get/productos
-    - put/productos/producto/:id
-    - delete/productos/producto/:id
+    - put/productos/:id
+    - delete/productos/:id
 
-  To Orders
+  Orders
     - post/pedidos
     - get/pedidos
     - get/pedidos/userOrder/:id
-    - put/pedidos/pedido/:id
-    - delete/pedidos/pedido/:id
+    - put/pedidos/:id
+    - delete/pedidos/:id

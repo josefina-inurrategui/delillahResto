@@ -79,14 +79,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3001/productos/producto/1",
+							"raw": "localhost:3001/productos/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3001",
 							"path": [
 								"productos",
-								"producto",
 								"1"
 							]
 						}
@@ -99,14 +98,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:3001/productos/producto/9",
+							"raw": "localhost:3001/productos/9",
 							"host": [
 								"localhost"
 							],
 							"port": "3001",
 							"path": [
 								"productos",
-								"producto",
 								"9"
 							]
 						}
@@ -204,7 +202,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:3001/clientes/update",
+					"name": "localhost:3001/clientes/",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -228,21 +226,21 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3001/clientes/update",
+							"raw": "localhost:3001/clientes/",
 							"host": [
 								"localhost"
 							],
 							"port": "3001",
 							"path": [
 								"clientes",
-								"update"
+								""
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "localhost:3001/clientes/clientes/:id",
+					"name": "localhost:3001/clientes/:id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -266,14 +264,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3001/clientes/cliente/6",
+							"raw": "localhost:3001/clientes/6",
 							"host": [
 								"localhost"
 							],
 							"port": "3001",
 							"path": [
 								"clientes",
-								"cliente",
 								"6"
 							]
 						}
@@ -353,7 +350,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:3001/pedidos/userOrder/1",
+					"name": "localhost:3001/pedidos/:id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -368,14 +365,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3001/pedidos/userOrder/1",
+							"raw": "localhost:3001/pedidos/1",
 							"host": [
 								"localhost"
 							],
 							"port": "3001",
 							"path": [
 								"pedidos",
-								"userOrder",
 								"1"
 							]
 						}
@@ -383,7 +379,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:3001/pedidos/pedido/:id",
+					"name": "localhost:3001/pedidos/:id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -407,14 +403,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3001/pedidos/pedido/8",
+							"raw": "localhost:3001/pedidos/8",
 							"host": [
 								"localhost"
 							],
 							"port": "3001",
 							"path": [
 								"pedidos",
-								"pedido",
 								"8"
 							]
 						}
@@ -422,7 +417,7 @@
 					"response": []
 				},
 				{
-					"name": "localhost:3001/pedidos/pedido/:id",
+					"name": "localhost:3001/pedidos/:id",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -437,14 +432,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:3001/pedidos/pedido/30",
+							"raw": "localhost:3001/pedidos/30",
 							"host": [
 								"localhost"
 							],
 							"port": "3001",
 							"path": [
 								"pedidos",
-								"pedido",
 								"30"
 							]
 						}

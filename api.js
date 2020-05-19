@@ -19,18 +19,18 @@ server.use(function(err, req, res, next) {
 server.post('/clientes', signUp)
 server.post('/clientes/login', validarUsuario, logIn)
 server.get('/clientes', onlyAdmin, getClients)
-server.put('/clientes/update', userOK, updateClient)
-server.delete('/clientes/cliente/:id', onlyAdmin, deleteClient) 
+server.put('/clientes', userOK, updateClient)
+server.delete('/clientes/:id', onlyAdmin, deleteClient) 
 
 //- Products: - 
 server.post('/productos', onlyAdmin, createProduct)
 server.get('/productos', getAllProducts) 
-server.put('/productos/producto/:id',validarIdProducto, onlyAdmin, updateProduct)
-server.delete('/productos/producto/:id', validarIdProducto, onlyAdmin, deleteProduct)
+server.put('/productos/:id',validarIdProducto, onlyAdmin, updateProduct)
+server.delete('/productos/:id', validarIdProducto, onlyAdmin, deleteProduct)
 
 // - Orders: - 
 server.post('/pedidos', userOK, postOrder)
 server.get('/pedidos', onlyAdmin, getAllOrders)
-server.get('/pedidos/userOrder/:id', userOK, getOrder)
-server.put('/pedidos/pedido/:id', onlyAdmin, updateOrder)
-server.delete('/pedidos/pedido/:id', validarIdPedido, onlyAdmin, deleteOrder) 
+server.get('/pedidos/:id', userOK, getOrder)
+server.put('/pedidos/:id', onlyAdmin, updateOrder)
+server.delete('/pedidos/:id', validarIdPedido, onlyAdmin, deleteOrder) 
