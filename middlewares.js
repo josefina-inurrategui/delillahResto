@@ -8,7 +8,7 @@ module.exports = {
             const db = await DataBase.query(`SELECT * FROM productos WHERE id = ${req.params.id}`, {type: sequelize.QueryTypes.SELECT})
             const dbFind = db.find(item => item.id == req.params.id)
             if(!dbFind){
-                return res.status(400).send('Id incorrecto');
+                return res.status(400).json('Id incorrecto');
             } 
             next() 
     },
@@ -17,7 +17,7 @@ module.exports = {
         const db = await DataBase.query(`SELECT * FROM clientes WHERE usuario = "${req.body.usuario}"`, {type: sequelize.QueryTypes.SELECT})
         const dbFind = db.find(item => item.usuario == req.body.usuario)
         if(!dbFind){
-            return res.status(400).send('Usuario o contraseña incorrectos!');
+            return res.status(400).json('Usuario o contraseña incorrectos!');
         } 
         next() 
     },
@@ -57,7 +57,7 @@ module.exports = {
         const db = await DataBase.query(`SELECT * FROM pedidos WHERE id = ${req.params.id}`, {type: sequelize.QueryTypes.SELECT})
         const dbFind = db.find(item => item.id == req.params.id)
         if(!dbFind){
-            return res.status(400).send('Id incorrecto');
+            return res.status(400).json('Id incorrecto');
         } 
         next() 
 },

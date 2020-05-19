@@ -6,14 +6,14 @@ module.exports ={
         DataBase.query(
             'INSERT INTO productos (producto, descripcion, precio, disponibilidad, id_imagen) VALUES (:producto, :descripcion, :precio, :disponibilidad, :id_imagen)',{
                 replacements: req.body
-            }).then(result => console.log(result) || res.status(200).end('Producto Agregado'))
+            }).then(result => console.log(result) || res.status(200).json('Producto Agregado'))
               .catch(error => console.log(error) || res.status(400).send('Invalid data'))
     },
     
     getAllProducts: (req,res) => {
         DataBase.query('SELECT * FROM productos', { type: sequelize.QueryTypes.SELECT })
         .then(result =>res.status(200).json(result))
-        .catch(error => console.log(error) || res.status(400).send('Invalid data'))
+        .catch(error => console.log(error) || res.status(400).json('Invalid data'))
     },
 
     updateProduct: (req,res) => {

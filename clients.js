@@ -9,7 +9,7 @@ module.exports ={
         DataBase.query(
             'INSERT INTO clientes (usuario, pass, nombre, apellido, email, telefono, direccion) VALUES (:usuario, :pass, :nombre, :apellido, :email, :telefono, :direccion)',{
                 replacements: req.body
-            }).then(result => console.log(result) || res.status(200).end('Usuario crado correctamente!'))
+            }).then(result => console.log(result) || res.status(200).json('Usuario crado correctamente!'))
               .catch(error => console.log(error) || res.status(400).send('Invalid data'))
     },
 
