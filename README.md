@@ -52,14 +52,13 @@ email: josefina.inurrategui@gmail.com
   A Pedidos
     - post/pedidos
     - get/pedidos
-    - get/pedidos/:id
+    - get/pedidos/userOrder/:id
     - put/pedidos/:id
     - delete/pedidos/:id
+    
+--------------//--------------------------
 
---------------------//------------------------
-
-
-# RESTful API using: 
+RESTfull API using: 
   - express
   - nodejs
   - MySQL 
