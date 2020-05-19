@@ -1,0 +1,460 @@
+{
+	"info": {
+		"_postman_id": "f5634f6b-4ce2-411f-82bf-10f4ca25bf0c",
+		"name": "Api Delillah",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Productos / Products",
+			"item": [
+				{
+					"name": "localhost:3001/productos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJwYXNzIjoicXdlcmFzZGYifSwiaWF0IjoxNTg5NjkyMzA2fQ.LbPC4LhsClmdUMOt3irgC7o1XhRB1YSmy09zSfpPM1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"producto\":\" \", \n\t\"descripcion\":\" \",\n\t\"precio\":0 ,\n\t\"disponibilidad\": 0,\n\t\"id_imagen\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/productos",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/productos/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/productos/",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3003/productos/:id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"precio\": 0,\r\n    \"disponibilidad\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/productos/producto/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"productos",
+								"producto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/productos/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/productos/producto/9",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"productos",
+								"producto",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para crear, leer, modificar y borrar productos.\r\n-------------------------//------------------------------\r\nCRUD Endpoints for products",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Clientes / Clients",
+			"item": [
+				{
+					"name": "localhost:3001/clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"usuario\":\" \", \n\t\"pass\":\" \",\n\t\"nombre\": \" \",\n\t\"apellido\": \" \",\n\t\"email\": \" \",\n\t\"telefono\": 0,\n\t\"direccion\":\" \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/clientes/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"usuario\":\" \",\r\n    \"pass\":\" \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/clientes/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"clientes",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/clientes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJpc19hZG1pbiI6MX0sImlzQWRtaW4iOlt7ImlkIjoxLCJpc19hZG1pbiI6MX1dLCJpYXQiOjE1ODk2OTI0NzZ9.hak4payEdCb3LSjFlkZaQ-do-KoIAz9zaBYYxHWBMQs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/clientes/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJpc19hZG1pbiI6MX0sImlzQWRtaW4iOlt7ImlkIjoxLCJpc19hZG1pbiI6MX1dLCJpYXQiOjE1ODk2OTE4NzN9.8UB2xYtkpP1CM7M3WKh3fmIEUMu3MOM7QCp8yAxB2p4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"telefono\": 0,\n\t\"direccion\": \" \",\n\t\"email\": \" \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/clientes/update",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"clientes",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/clientes/clientes/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJpc19hZG1pbiI6MX0sImlzQWRtaW4iOlt7ImlkIjoxLCJpc19hZG1pbiI6MX1dLCJpYXQiOjE1ODk2OTE4NzN9.8UB2xYtkpP1CM7M3WKh3fmIEUMu3MOM7QCp8yAxB2p4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/clientes/cliente/6",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"clientes",
+								"cliente",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endopints para registrar, loggear, modificar información y eliminar usuarios\r\n------------------------------//--------------------------------------------\r\nCRUD empoints fot users. Also log in and sign up.",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedidos / Orders",
+			"item": [
+				{
+					"name": "localhost:3001/pedidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJwYXNzIjoicXdlcmFzZGYifSwiaWF0IjoxNTg5ODI5MjI5fQ.YM8cmG91WwTC-NIicEsJl6PYl4KU3PzxuaIsaO9ZlTw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"idPago\": 0,\n\t\"items\":[\n\t\t\t{\"cantidad\":0,\n\t\t\t\"idProducto\":0},\n\t\t\t\n\t\t\t{\"cantidad\": 0,\n\t\t\t\"idProducto\":0},\n\t\t\t\n\t\t\t{\"cantidad\": 0,\n\t\t\t\"idProducto\":0}\n\t\t]\n\t\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/pedidos",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/pedidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJpc19hZG1pbiI6MX0sImlzQWRtaW4iOlt7ImlkIjoxLCJpc19hZG1pbiI6MX1dLCJpYXQiOjE1ODk4MzcwNzh9.vLlUf-hexs6XtI-C06rh4lfWWQHUvat7MuAcqShJXus",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/pedidos",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/pedidos/userOrder/1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoyLCJwYXNzIjoicXdlcmFzZGYifSwiaWF0IjoxNTg5Nzc3ODQ5fQ.iHh_cnqxDnSXRBQUUM-E2c62ZnwFDkatwMOrga2Eu3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/pedidos/userOrder/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"pedidos",
+								"userOrder",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/pedidos/pedido/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJpc19hZG1pbiI6MX0sImlzQWRtaW4iOlt7ImlkIjoxLCJpc19hZG1pbiI6MX1dLCJpYXQiOjE1ODk4Mzg5ODl9.VeQWYECtfDowBTlHSQlH5gRoJeavdRsLXuqiFQI9WbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"estado\": \" \"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/pedidos/pedido/8",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"pedidos",
+								"pedido",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3001/pedidos/pedido/:id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJpc19hZG1pbiI6MX0sImlzQWRtaW4iOlt7ImlkIjoxLCJpc19hZG1pbiI6MX1dLCJpYXQiOjE1ODk4MzI3NDV9.xgIqnjGNJsY1vXhkXf94IfwfUU8Cosxy7sLGA4nJ6k8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3001/pedidos/pedido/30",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"pedidos",
+								"pedido",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para crear, leer, modificar y borrar Pedidos.\r\n-------------------------//------------------------------\r\nCRUD Endpoints for orders",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
