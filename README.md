@@ -1,4 +1,6 @@
-﻿# delillahResto
+Third project from Acamica course. Creating a RESTful API using NodeJs.
+
+# delillahResto
 RESTful API utilizando: 
   - express
   - nodejs
